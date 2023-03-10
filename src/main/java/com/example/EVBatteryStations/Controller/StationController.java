@@ -35,7 +35,7 @@ public class StationController {
 
 
     @PutMapping("/{id}/edit")
-    public String editStation(@PathVariable("id") Integer id,@RequestBody Station station){
+    public String editStation(@RequestBody Station station, @PathVariable Integer id ){
         return stationService.editStation(id,station);
     }
 

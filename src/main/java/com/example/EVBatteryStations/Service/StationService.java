@@ -30,12 +30,13 @@ public class StationService {
     }
 
     public String editStation(Integer id,Station station){
+
         Station updatedStation = stationRepository.findById(id).get();
         updatedStation.setName(station.getName());
         updatedStation.setImage(station.getImage());
         updatedStation.setAddress(station.getAddress());
         updatedStation.setPricing(station.getPricing());
-        updatedStation.setId(id);
+
 
         stationRepository.save(updatedStation);
 

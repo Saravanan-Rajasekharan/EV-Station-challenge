@@ -7,15 +7,20 @@ import javax.persistence.*;
 public class Station {
 
     @Id
+    @Column(name="station_id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
 
+    @Column(name="station_name")
     private String name;
 
+    @Column(name="station_image")
     private String image;
 
+    @Column(name="station_pricing")
     private int pricing;
 
+    @Column(name="station_address")
     private String address;
 
     //Mapping
